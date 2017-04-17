@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class Main {
+public class Main3 {
 
     private static String[] names = {"Zula", "Irving", "Chanelle", "Terra", "Newton", "Jeraldine", "Liane", "Helen", "Willette", "Myra", "Jeramy", "Paulita", "Mollie", "Evelyne", "Alberto", "Carina", "Zana", "Kassie", "Brian", "Jeb", "Matt", "Gil"};
     private static Queue<Ticket> q = new Queue<>();
@@ -44,7 +44,7 @@ public class Main {
             Ticket ticket = new Ticket();
             ticket.setPriority(random.nextInt(100));
             ticket.setName(names[random.nextInt(names.length)]);
-            q.add(ticket);
+            q.offer(ticket);
         }
     }
 
@@ -54,7 +54,6 @@ public class Main {
         System.out.println("number to remove from line: " + remRandom);
 
         for (int i = 0; i < remRandom; ++i) {
-//            Ticket ticket = q.remove();
             Ticket ticket = q.poll();
             System.out.println("removing: " + ticket);
         }
